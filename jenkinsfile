@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+    stage ("Pre-build") {
+      steps {
+        echo "Pre build steps ... "
+      }
+    }
+    stage ("checkout repo") {
+      steps {
+        echo "check out"
+      }
+    }
+    stage ("Run project") {
+      steps {
+        dir("jenkins-project") {
+          sh "python HelloWorld.py"
+        }
+      }
+    }
+  }
+}
