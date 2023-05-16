@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+int main(int argc, char *argv[])
 {
-    int n;
+    int n = atoi(argv[1]);
     int t = 0;
-    printf("Number: ");
-    scanf("%d", &n);
     while(1){
         if(n > 0){
             t += n%10;
